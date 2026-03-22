@@ -24,6 +24,18 @@ LMO is a lightweight desktop labeling tool built with Electron. Create bounding 
 
 ---
 
+## Screenshots
+
+| Labeling Editor | Dataset Management |
+|:---:|:---:|
+| ![Labeling](assets/img/labeling.png) | ![Datasets](assets/img/datasets.png) |
+
+| Settings |
+|:---:|
+| ![Settings](assets/img/settings.png) |
+
+---
+
 ## Features
 
 ### Annotation Tools
