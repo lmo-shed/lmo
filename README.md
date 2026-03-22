@@ -27,45 +27,49 @@ LMO is a lightweight desktop labeling tool built with Electron. Create bounding 
 
 ## Features
 
-### Annotation
-| Tool | Description |
-|------|-------------|
-| **BBox** | Click & drag, resize handles, arrow key nudge |
-| **Polygon** | Vertex placement, edge insert, right-click delete |
-| **Keypoint** | Per-class templates with skeleton, multi-select drag |
-| **SAM** | Interactive point-click segmentation (NVIDIA GPU) |
+### Annotation Tools
+| Tool | Key | Description |
+|------|-----|-------------|
+| **Select** | `A` | Click to select, drag to move, resize handles |
+| **BBox** | `W` | Click & drag to draw, arrow key nudge |
+| **Polygon** | `E` | Vertex placement, edge insert, right-click delete |
+| **Keypoint** | `R` | Per-class templates with skeleton, multi-select drag |
+| **SAM** | `C` | Interactive point-click segmentation (NVIDIA GPU) |
+| **Context Menu** | `V` | Quick class change, attributes |
 
 ### Workflow
-- Undo / Redo (`Ctrl+Z` / `Ctrl+Y`)
-- Copy / Paste with offset (`Ctrl+C` / `Ctrl+V`)
-- Multi-select (`Ctrl+Click`, `Shift+Click`)
-- Label lock — prevent accidental edits (`L`)
-- Image tags — Notion-style multi-select with auto-complete
+- **Undo / Redo** — `Ctrl+Z` / `Ctrl+Y`
+- **Copy / Paste** — `Ctrl+C` / `Ctrl+V` (with offset)
+- **Multi-select** — `Ctrl+Click`, `Shift+Click`, `Ctrl+A`
+- **Label lock** — `L` to prevent accidental edits
+- **Delete under cursor** — `D` to quickly remove a bbox
+- **Image tags** — Notion-style multi-select with auto-complete
 
-### Data
-- **Project → Dataset** structure with roles (train / val / test)
-- **Import**: COCO, CVAT XML, YOLO, images, video frames
-- **Export**: COCO, CVAT XML, YOLO → `annotations/` folder
-- Move images between datasets with labels
+### Data Management
+- **Project → Dataset** hierarchy with roles (train / val / test)
+- **Import** — COCO, CVAT XML, YOLO, images, video frames (ffmpeg)
+- **Export** — COCO, CVAT XML, YOLO → `annotations/` folder
+- Move images between datasets (labels follow)
 - Filesystem sync detection
 
-### UI
+### UI / UX
 - Dark / Light / System theme
-- Canvas background color (adjustable)
+- Adjustable canvas background color
 - Customizable keyboard shortcuts
-- Statistics dashboard (class distribution, progress, tags)
+- Statistics dashboard — class distribution, progress, tags
 - Tag-based image filtering
+- i18n — English, 한국어
 
 ---
 
 ## Download
 
-Get the latest build from [**Releases**](https://github.com/lmo-shed/lmo/releases).
+[**Releases**](https://github.com/lmo-shed/lmo/releases)에서 OS에 맞는 파일을 다운로드하세요.
 
 | Platform | File | Note |
 |----------|------|------|
-| Linux | `.deb` | Ubuntu / Debian |
 | Windows | `.exe` | NSIS installer |
+| Linux | `.deb` | Ubuntu / Debian |
 
 ---
 
@@ -74,8 +78,53 @@ Get the latest build from [**Releases**](https://github.com/lmo-shed/lmo/release
 1. **Download & install** from Releases
 2. **Create a project** — select a folder
 3. **Create a dataset** — give it a name
-4. **Import images** — drag & drop, import from folder, or extract video frames
-5. **Start labeling** — click an image to open the annotation view
+4. **Import images** — drag & drop, folder import, or video frame extraction
+5. **Start labeling** — click an image to open the editor
+
+---
+
+## Keyboard Shortcuts
+
+All shortcuts are customizable in **Settings**.
+
+### Tools
+
+| Key | Action |
+|-----|--------|
+| `A` | Select |
+| `W` | BBox |
+| `E` | Polygon |
+| `R` | Keypoint |
+| `C` | SAM |
+| `V` | Context Menu |
+
+### Actions
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+Z` | Undo |
+| `Ctrl+Y` | Redo |
+| `Ctrl+C` | Copy |
+| `Ctrl+V` | Paste |
+| `Ctrl+A` | Select all |
+| `Delete` | Delete selected |
+| `D` | Delete bbox under cursor |
+| `H` | Toggle label visibility |
+| `T` | Toggle class names |
+| `L` | Toggle lock |
+
+### Navigation
+
+| Key | Action |
+|-----|--------|
+| `Z` / `X` | Previous / Next image |
+| `Shift+Z` / `Shift+X` | Skip 10 images |
+| `F` | Fit to screen |
+| `G` | Toggle image list |
+| `Space + Drag` | Pan |
+| `Scroll` | Zoom |
+| `Arrow` | Move label 1px |
+| `Shift+Arrow` | Move label 10px |
 
 ---
 
@@ -85,7 +134,7 @@ Point-click segmentation powered by ONNX Runtime. Requires **NVIDIA GPU + CUDA**
 
 ### Prepare model
 
-Download SAM ONNX models (e.g. from [HuggingFace](https://huggingface.co/models?search=sam2+onnx)) and zip them:
+Download SAM ONNX models (e.g. from [HuggingFace](https://huggingface.co/models?search=sam2+onnx)) and zip:
 
 ```
 sam_models.zip
@@ -97,36 +146,18 @@ sam_models.zip
 
 ### Load in LMO
 
-**Settings** → **SAM Interactive** → **모델 업로드 (.zip)** → select zip → done.
+**Settings** → **SAM Interactive** → **Upload Model (.zip)** → select zip → done.
 
-Press **C** in labeling view to activate SAM mode.
+Press `C` in the labeling view to activate SAM mode.
 
-> SAM will not work on CPU-only or Mac environments.
-
----
-
-## Keyboard Shortcuts
-
-All shortcuts are customizable in **Settings**.
-
-| Key | Action | Key | Action |
-|-----|--------|-----|--------|
-| `V` | Select | `Ctrl+Z` | Undo |
-| `B` | BBox / Polygon | `Ctrl+Y` | Redo |
-| `K` | Keypoint | `Ctrl+C/V` | Copy / Paste |
-| `C` | SAM | `Ctrl+A` | Select all |
-| `H` | Toggle labels | `Delete` | Delete selected |
-| `T` | Toggle names | `Arrow` | Move 1px |
-| `L` | Lock label | `Shift+Arrow` | Move 10px |
-| `F` | Fit to screen | `Space+Drag` | Pan |
-| `G` | Image list | `Scroll` | Zoom |
+> SAM requires NVIDIA GPU with CUDA. Not available on CPU-only or macOS.
 
 ---
 
 ## Supported Formats
 
-| | Import | Export |
-|---|--------|--------|
+| Format | Import | Export |
+|--------|--------|--------|
 | **COCO** | `*.json` + images | `annotations/coco.json` |
 | **CVAT** | `annotations.xml` + images | `annotations/annotations.xml` |
 | **YOLO** | `data.yaml` + images/labels | `annotations/labels/*.txt` + `data.yaml` |
