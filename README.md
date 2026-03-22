@@ -74,13 +74,13 @@ LMO is a lightweight desktop labeling tool built with Electron. Create bounding 
 - Customizable keyboard shortcuts
 - Statistics dashboard — class distribution, progress, tags
 - Tag-based image filtering
-- i18n — English, 한국어
+- i18n — English, Korean
 
 ---
 
 ## Download
 
-[**Releases**](https://github.com/lmo-shed/lmo/releases)에서 OS에 맞는 파일을 다운로드하세요.
+Get the latest build from [**Releases**](https://github.com/lmo-shed/lmo/releases).
 
 | Platform | File | Note |
 |----------|------|------|
