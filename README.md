@@ -8,7 +8,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-blue" alt="Platform" />
-  <img src="https://img.shields.io/badge/Electron-41-47848F?logo=electron&logoColor=white" alt="Electron" />
   <img src="https://img.shields.io/github/v/release/lmo-shed/lmo?include_prereleases&label=Release" alt="Release" />
   <img src="https://img.shields.io/badge/License-Non--Commercial-orange" alt="License" />
 </p>
