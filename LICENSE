@@ -1,27 +1,37 @@
-LMO - Label Management & Operations
-Copyright (c) 2026 lmo-shed
+LMO - End User License Agreement (EULA)
+Copyright (c) 2026 lmo-shed. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to use,
-copy, modify, merge, publish, and distribute the Software, subject to the
-following conditions:
+By downloading, installing, or using this software ("LMO"), you agree to the
+following terms:
 
-1. The above copyright notice and this permission notice shall be included in
-   all copies or substantial portions of the Software.
+1. GRANT OF LICENSE
+   You are granted a free, non-exclusive, non-transferable license to use LMO
+   for any purpose, including personal, academic, and commercial use within
+   your organization.
 
-2. The Software shall not be sold, sublicensed, or otherwise commercially
-   distributed as a standalone product, whether in original or modified form.
-   This includes, but is not limited to, selling the Software, offering the
-   Software as a paid service, or bundling the Software as part of a
-   commercial product where the Software constitutes a primary component.
+2. RESTRICTIONS
+   You may NOT:
+   (a) Sell, sublicense, rent, or lease the Software to any third party.
+   (b) Redistribute the Software as a standalone product or as a primary
+       component of a commercial product or service.
+   (c) Reverse engineer, decompile, or disassemble the Software.
 
-3. Users may freely use the Software and any outputs or artifacts produced
-   by the Software for any purpose, including commercial purposes.
+3. OUTPUTS
+   Any outputs or artifacts produced by using the Software (e.g., labeled
+   datasets, annotations, trained models) are entirely yours. You may use
+   them for any purpose, including commercial purposes, without restriction.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+4. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+5. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+   USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. TERMINATION
+   This license is effective until terminated. It will terminate automatically
+   if you fail to comply with any term of this agreement.

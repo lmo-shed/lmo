@@ -9,7 +9,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-blue" alt="Platform" />
   <img src="https://img.shields.io/github/v/release/lmo-shed/lmo?include_prereleases&label=Release" alt="Release" />
-  <img src="https://img.shields.io/badge/License-Non--Commercial-orange" alt="License" />
+  <img src="https://img.shields.io/badge/License-EULA%20(Free)-orange" alt="License" />
 </p>
 
 <p align="center">
@@ -180,10 +180,10 @@ Keypoint data is preserved across all formats.
 
 ## License
 
-This software is distributed under a **non-commercial license**.
+This software is free to use but **not for resale**.
 
-- Free to use, modify, and distribute
-- Selling the software itself or commercial redistribution is prohibited
-- Outputs produced using the software (e.g. labeled data) may be used commercially
+- Free for personal, academic, and commercial use
+- Selling or redistributing the software itself is prohibited
+- Outputs (labeled data, models, etc.) are yours — use them however you want
 
 See [LICENSE](LICENSE) for details.
